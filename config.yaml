@@ -1,0 +1,20 @@
+FEATURE_USER_INITIALIZE: true
+BROWSER_API_CALLS_XHR_ONLY: false
+SUPER_USERS:
+- quayadmin
+FEATURE_USER_CREATION: false
+FEATURE_QUOTA_MANAGEMENT: true
+FEATURE_BUILD_SUPPORT: True
+DISTRIBUTED_STORAGE_CONFIG:
+  radosGWStorage: #storage config name
+    - RadosGWStorage #actual driver
+    - access_key: access_key_here #parameters
+      secret_key: secret_key_here
+      bucket_name: bucket_name_here
+      hostname: hostname_here
+      is_secure: 'true'
+      port: '443'
+      storage_path: /datastorage/registry
+DISTRIBUTED_STORAGE_DEFAULT_LOCATIONS: []
+DISTRIBUTED_STORAGE_PREFERENCE: #must contain name of the storage config
+    - radosGWStorage
